@@ -271,7 +271,7 @@ for (g in unique(PAD_BMI_DM_CKD_MCF$PI)) {
 }
 
 legend("bottomright",
-       legend = c("CYP2C19 LoF alleles", "No LoF alleles"),
+       legend = expression(italic("CYP2C19") ~ "LoF alleles", "No LoF alleles"),
        col = cols,
        lwd = 2)
 
