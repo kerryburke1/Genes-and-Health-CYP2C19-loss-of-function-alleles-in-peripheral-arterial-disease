@@ -282,6 +282,8 @@ CYP2C19_genos = CYP2C19_genos %>% mutate(IM = ifelse((`10_94781859_G_A_G`<1.5 & 
 
 CYP2C19_genos = CYP2C19_genos %>%mutate(UR = ifelse(`10_94761900_C_T_C`<0.5 & `10_94780653_G_A_G`>1.5 & `10_94781859_G_A_G`>1.5,"UR","other"))
 
+CYP2C19_genos = CYP2C19_genos %>%mutate(RM = ifelse(`10_94761900_C_T_C`<1.5 & `10_94780653_G_A_G`>1.5 & `10_94781859_G_A_G`>1.5,"RM","other"))
+
 #join genotype with covars 
 PAD_events_exposed_link_covars_geno = PAD_events_exposed_link_covars %>% left_join(CYP2C19_genos,by="IID")
 
