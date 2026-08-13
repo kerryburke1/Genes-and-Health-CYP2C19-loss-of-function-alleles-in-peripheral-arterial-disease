@@ -64,7 +64,8 @@ OPCSBarts$MALE= ifelse(OPCSBarts$OPCS_Proc_Cd=='X091'|OPCSBarts$OPCS_Proc_Cd=='X
                        |OPCSBarts$OPCS_Proc_Cd=='L251'|OPCSBarts$OPCS_Proc_Cd=='L252'|OPCSBarts$OPCS_Proc_Cd=='L253'
                        |OPCSBarts$OPCS_Proc_Cd=='L261'|OPCSBarts$OPCS_Proc_Cd=='L262'|OPCSBarts$OPCS_Proc_Cd=='L263'
                        |OPCSBarts$OPCS_Proc_Cd=='L265'|OPCSBarts$OPCS_Proc_Cd=='L266'|OPCSBarts$OPCS_Proc_Cd=='L267'
-                       |OPCSBarts$OPCS_Proc_Cd=='L268'|OPCSBarts$OPCS_Proc_Cd=='L269'              
+                       |OPCSBarts$OPCS_Proc_Cd=='L268'|OPCSBarts$OPCS_Proc_Cd=='L269'
+                       
                        
                        |OPCSBarts$OPCS_Proc_Cd=='L501'
                        |OPCSBarts$OPCS_Proc_Cd=='L502'|OPCSBarts$OPCS_Proc_Cd=='L503'|OPCSBarts$OPCS_Proc_Cd=='L504'
@@ -99,6 +100,7 @@ OPCSBarts$MALE= ifelse(OPCSBarts$OPCS_Proc_Cd=='X091'|OPCSBarts$OPCS_Proc_Cd=='X
 #only keep MALE events
 OPCSBarts <- OPCSBarts %>%
   filter(MALE ==1)
+nrow(OPCSBarts)
 
 #rename nhs number column
 OPCSBarts <- OPCSBarts %>% rename (nhs_number = `PseudoNHS_2024-07-10`)
